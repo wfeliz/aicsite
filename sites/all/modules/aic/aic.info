@@ -1,0 +1,5 @@
+;$Id$
+name = "AIC Miscellaneous"
+description = "Miscellaneous customizations for the AIC websites."
+package = "AIC"
+core = 6.x

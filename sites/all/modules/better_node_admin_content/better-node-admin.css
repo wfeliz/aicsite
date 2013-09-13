@@ -1,0 +1,22 @@
+
+form#better-node-admin-content fieldset#filters fieldset{
+	border: none;
+	background: none;
+	margin: .75em 0;
+	padding: 0 0 0 12em;
+	position: relative;
+}
+
+form#better-node-admin-content fieldset#filters fieldset legend,
+form#better-node-admin-content fieldset#filters fieldset div.form-item{
+	display: inline;
+	margin: 0 1em;
+	padding: 0;
+}
+
+form#better-node-admin-content fieldset#filters fieldset legend{
+	width: 10em;
+	position: absolute;
+	left: 0;
+	top: 0;
+}

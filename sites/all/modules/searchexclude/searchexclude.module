@@ -1,0 +1,40 @@
+<?php
+function searchexclude_db_rewrite_sql($query, $primary_table, $primary_field, $args) {
+if ($query == '' && $primary_table == 'n' && $primary_field == 'nid' && empty($args)){
+  $excluded_types = variable_get('your_module_types', array());
+    if (!empty($excluded_types)) {
+      $where = " n.type NOT IN ('". join("','", $excluded_types) ."') ";
+      return array('where' => $where);
+    }
+  }
+}
+function searchexclude_search($op = 'search') {
+  if ('admin' == $op) {
+    $form = array();
+    $form['your_module_types'] = array(
+      '#type' => 'select',
+      '#multiple' => TRUE,
+      '#title' => t('Exclude Node Types'),
+      '#default_value' => variable_get('your_module_types', array()),
+      '#options' => node_get_types('names'),
+      '#size' => 9,
+      '#description' => t('Node types to exclude from search results.'),
+    );
+    return $form;
+  }
+}
+function searchexclude_form_alter(&$form, $form_state, $form_id){
+  switch ($form_id) {
+    case 'search_form':
+      $excluded_types = variable_get('your_module_types', array());
+      $types = array_map('check_plain', node_get_types('names'));
+     
+     foreach($excluded_types as $excluded_type) {
+       unset($types[$excluded_type]);
+     }
+
+     $form['advanced']['type']['#options'] = $types;
+     break;
+  }
+}
+?>

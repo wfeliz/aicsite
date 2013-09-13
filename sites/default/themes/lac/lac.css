@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+/* initial conditions ============================================== */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,.form-item {margin: 0;padding: 0;border: 0;font-family: inherit;}
+/* Tables still need 'cellspacing="0" in markup*/
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight:400; }
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+/* /initial conditions ============================================== */
+/* html tag styles ================================================== */
+body {color: #000000; background:#fff;}
+body,td,input,textarea,select,option {font: normal 12px/1.5em  Arial, Helvetica, sans-serif;}
+p {margin: 5px 0px 10px 0px;line-height:1.5;}
+b {font-weight: bold;}
+i {font-style: italic;}
+u {text-decoration: underline;}
+small { font-size:90%;}
+.small {font-size:90%}
+a, a:visited {color:#0073ae;text-decoration: underline;	font-weight:bold; outline:none;}
+a:hover, a:active {color: #990000;}
+#left-col li a.active, #left-col li a.active:visited {color:#0073ae;text-decoration: underline;	font-weight:normal; outline:none;}
+#left-col li a.active:hover, #left-col li a.active:active {color:#990000;}
+h1 {font-size: 200%;margin: 0px 0px 10px 0px;font-weight:normal;line-height:1.2;font-family:Georgia, Times, serif;}
+h2 {font-size: 150%;margin: 0px 0px 10px 0px;font-weight:normal;line-height:1.4;font-family:Georgia, Times, serif;}
+h3 {font-size: 130%;margin: 0px 0px 10px 0px;font-weight:bold;line-height:1.4;font-family:Georgia, Times, serif;}
+h4 {font-size: 120%;margin: 0px 0px 5px 0px;font-weight:bold;line-height:1.5;font-family:Georgia, Times, serif;}
+h5 {font-size: 110%;margin: 0px 0px 5px 0px;font-weight:bold;line-height:1.5;font-family:Georgia, Times, serif;}
+h6 {font-size: 100%;font-weight: bold;margin: 0px 0px 5px 0px;line-height:1.5;font-family:Georgia, Times, serif;}
+table.separate {border-collapse: separate;}
+th {font-weight:bold;}
+form table td {padding: 3px;}
+fieldset {border:none;margin:10px 0px;padding:5px 0px;}
+legend {padding: 0px 5px 0px 5px;}
+img {border-width: 0px;}
+pre { background-color: #eee; padding: 0.75em 1.5em; font-size: 12px; border: 1px solid #ddd;}
+code {font: 110% 'Courier New', Courier, Fixed;}
+acronym, abbr{font-size: 90%;letter-spacing: .07em;}
+/* /Tag styles ========================================================= */
+/* list styles ========================================================= */
+ul, ol, dl {margin: 0px 0px 0px 8px;}
+ul {padding: 0px 0px 10px 10px;list-style:square;}
+ol {padding: 0px 0px 10px 25px;}
+#left-col #content #content-inner #content-area .node-inner .content li {margin:0 0 7px 0;}
+ul.links.inline li {background:none!important;}
+ul.links.inline {text-align:right; padding:0 0 10px 0;display:block;}
+div.ipc ul {margin:0;}
+div.ipc li {margin:0; padding:6px 0;list-style:none; border-bottom:1px dashed #999;}
+li.statistics_counter {display:none!important;}
+.view-lac-practice-advisories .item-list ul {list-style:none;}
+.view-lac-practice-advisories .item-list ul li {margin:0; list-style:none;}
+/* /list styles ========================================================= */
+/* form ================================================================= */
+label {font-weight: bold;}
+.required {color: #cc0000;}
+.auto {width: auto;}
+/* /form ================================================================= */
+/* margins and pads ======================================================== */
+.marg5 {margin: 5px}
+.marg10 {margin: 10px;}
+.marg15 {margin: 15px;}
+
+.margtop3 {margin-top: 3px;}
+.margright3 {margin-right: 3px;}
+.margbottom3 {margin-bottom: 3px;}
+.margleft3 {margin-left: 3px;}
+
+.margtop5 {margin-top: 5px;}
+.margright5 {margin-right: 5px;}
+.margbottom5 {margin-bottom: 5px;}
+.margleft5 {margin-left: 5px;}
+
+.margtop10 {margin-top: 10px;}
+.margright10 {margin-right: 10px;}
+.margbottom10 {margin-bottom: 10px;}
+.margleft10 {margin-left: 10px;}
+
+.margtop15 {margin-top: 15px;}
+.margright15 {margin-right: 15px;}
+.margbottom15 {margin-bottom: 15px;}
+.margleft15 {margin-left: 15px;}
+
+.margtop20 {margin-top: 20px;}
+.margright20 {margin-right: 20px;}
+.margbottom20 {margin-bottom: 20px;}
+.margleft20 {margin-left: 20px;}
+
+.margtop25 {margin-top: 25px;}
+.margright25 {margin-right: 25px;}
+.margbottom25 {margin-bottom: 25px;}
+.margleft25 {margin-left: 25px;}
+
+.margbottom35 {margin-bottom: 35px;}
+
+.padtop3 {padding-top: 3px;}
+.padright3 {padding-right: 3px;}
+.padbottom3 {padding-bottom: 3px;}
+.padleft3 {padding-left: 3px;}
+
+.padtop5 {padding-top: 5px;}
+.padright5 {padding-right: 5px;}
+
+.padbottom5 {padding-bottom: 5px;}
+.padleft5 {padding-left: 5px;}
+
+.padtop10 {padding-top: 10px;}
+.padright10 {padding-right: 10px;}
+.padbottom10 {padding-bottom: 10px;}
+.padleft10 {padding-left: 10px;}
+
+.padtop15 {padding-top: 15px;}
+.padright15 {padding-right: 15px;}
+.padbottom15 {padding-bottom: 15px;}
+.padleft15 {padding-left:15px;}
+
+.padtop20 {padding-top: 20px;}
+.padright20 {padding-right: 20px;}
+.padbottom20 {padding-bottom: 20px;}
+.padleft20 {padding-left:20px;}
+
+.padbottom25 {padding-bottom:25px;}
+.padbottom45 {padding-bottom:45px;}
+.padbottom60 {padding-bottom:60px;}
+
+.padleft15 {padding-left: 15px;}
+.padleft25 {padding-left:25px;}
+.padleft35 {padding-left:35px;}
+
+.pad5 {padding: 5px;}
+.pad10 {padding: 10px;}
+.pad15 {padding: 15px;}
+
+table.tblpad3 td {padding: 3px;}
+table.tblpad5 td {padding: 5px;}
+
+.tablepad td {padding:5px;}
+.tablepad10 td {padding:10px;}
+/* /shims and pads ======================================================== */
+/* layout styles ========================================================== */
+#skipnav, #skip-to-nav {margin-left:-9999px;height:0px;}
+#page {width:960px;margin:0 auto; background:url(/sites/default/themes/lac/images/bak.png) top left repeat;}
+#header {height:122px; background:url(/sites/default/themes/lac/images/honor.jpg) top left no-repeat;overflow:hidden;}
+#logo {padding:13px 0 0 40px; float:left;}
+#jump {background:url(/sites/default/themes/lac/images/jump_bak.png) top right no-repeat; width:443px; height:40px;float:right;}
+#navbar-lac {background:url(/sites/default/themes/lac/images/nav_bak.gif) top left no-repeat; width:960px;height:38px;}
+#col-container {padding:25px 10px;overflow:hidden;}
+#left-col {float:left; width:681px;background:#fff;margin:0 22px 0 0;}
+#left-col #content table.page-title {width:681px; height:68px;background:url(/sites/default/themes/lac/images/title_bak.gif) top left no-repeat;display: table-cell;vertical-align: middle;}
+#left-col #content h1.title {color:#fff;font-family:Georgia, Times, serif;font-weight:bold;padding:0 18px;}
+#left-col #content #content-area {padding:10px 20px;}
+/* front page styles */
+#left-col-front {float:left; width:681px;margin:0 22px 0 0;}
+#front-bottom {overflow:hidden;margin:25px 0 0 0;}
+#front-bottom-left {float:left; width:329px;margin: 0 23px 0 0;}
+#block-block-31,#block-block-34,#block-block-32,#block-block-33{background:#fff; padding:7px;}
+#block-block-31 h2,#block-block-34 h2,#block-block-32 h2,#block-block-33 h2 {text-indent:-9999px;width:315px; height:58px;}
+#block-block-31 h2 {background:url(/sites/default/themes/lac/images/whatsnew.gif) top left no-repeat;}
+#block-block-34 h2 {background:url(/sites/default/themes/lac/images/clearinghouse.gif) top left no-repeat;}
+#block-block-32 h2 {background:url(/sites/default/themes/lac/images/practice.gif) top left no-repeat;}
+#block-block-33 h2 {background:url(/sites/default/themes/lac/images/lit-adv.gif) top left no-repeat;}
+#block-block-34,#block-block-33 {margin:15px 0 0 0;}
+#front-bottom-right {float:right; width:329px;}
+body.front #content-top {overflow:hidden; background:#fff;padding:5px;}
+.views_slideshow_singleframe_main .overlay {width: 165px;height: 250px;position: relative;float: right;margin: -305px 0 0 0;padding: 25px;background: #333;opacity: .9; -moz-opacity: .9;-webkit-opacity: .9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter: alpha(opacity=90);color: #fff;}
+.views_slideshow_singleframe_main .overlay h3.tab-headline {font-family: Arial,Helvetica,sans-serif;font-weight: normal;opacity: 1; -moz-opacity: 1;-webkit-opacity: 1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);}
+.views_slideshow_singleframe_main .overlay h3.tab-headline a {color: #fff;text-decoration: none;}
+.views_slideshow_singleframe_main .overlay h3.tab-headline a:hover {text-decoration: underline}
+.views_slideshow_singleframe_main .overlay .tab-text, .views_slideshow_singleframe_main .overlay .tab-link {font-size: 13px;}
+.views_slideshow_singleframe_main .overlay .tab-link a {text-decoration: none;color: #fff200;}
+.views_slideshow_singleframe_main .overlay .tab-link a:hover {text-decoration: underline;}
+.front .views-slideshow-controls-bottom {float: right;position: relative;margin: -60px 54px 0 0;z-index: 10}
+.front .views_slideshow_pause {display: none;}
+.front .views_slideshow_previous {float: left;position:relative;right:14px;top:14px;text-indent: 100%;white-space: nowrap;overflow: hidden;background: url(/sites/default/themes/aic/images/arrow.png) left top no-repeat;width: 7px; height: 10px;}
+.front .views_slideshow_next {float: right;position:relative;left:10px;top:14px;text-indent: 100%;white-space: nowrap;overflow: hidden;background: url(/sites/default/themes/aic/images/arrow-right.png) left top no-repeat;width: 7px; height: 10px}
+.front .views_slideshow_pagerNumbered .activeSlide {border: 1px solid #fff200!important;}
+.front .views_slideshow_pagerNumbered .activeSlide a {color: #fff200!important;}
+.front .views_slideshow_pagerNumbered .pager-item {padding: 2px 4px;border: 1px solid #fff;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;margin: 0 3px 0 0;font-size: 11px} 
+.front .views_slideshow_pagerNumbered .pager-item a {color: #fff;text-decoration: none;}
+/* /front page styles */
+#right-col {float:right;width:237px;}
+#right-col .block {margin: 0 0 20px 0;}
+#footer {background:#333;color:#999;padding:30px 42px;overflow:hidden;}
+#footer-left {float:left;}
+#footer-right {float:right;}
+#footer a {color:#fff;text-decoration:none;}
+#footer a:hover, #footer a:active {text-decoration:underline;}
+/* jump to section styles ================================================ */
+select.quick_menu_select {font-size:90%; margin:10px 0 0 14px;line-height:.9em;border:1px solid #dcdcdc;}
+.quick_menu_select option {font-size:100%;}
+#block-block-1 {float:right;}
+#block-block-1 img {vertical-align:middle;}
+/* / jump to section styles =============================================*/
+/* search form styles ===================================================*/
+div.search {float:right;margin:50px 35px 0 0; height:20px;overflow:hidden;}
+div.search form table td {padding:0 2px 0 0;}
+/* hack for annoying firefox issues */
+@-moz-document url-prefix() { .search-submit { padding:1px 0 0 0; } } 
+.search-text {background: url(/sites/default/themes/ipc/images/search_input_bak.png) top left no-repeat; height:20px; width:168px;border:0;}
+/* / search form styles =================================================*/
+/* homepage image block styles ==================================================*/
+div.lac-home {background:#fff; width:663px; padding:9px;}
+div.lac-home h2 {padding-top:5px;color:#244254;}
+div.lac-home p {margin:0;}
+p.lac-caption {width:643px; background:#636363; position:relative; z-index:3; color:#fff; font-weight:bold; display:block; padding:3px 10px 7px 10px; margin:-69px 0 0 0!important; font-size:115%; opacity:0.85;filter:alpha(opacity=85); height:55px;}
+p.lac-caption a {color:#fa0831;}
+/* lawsuit block styles ================================================ */
+body.page-our-litigation-advocacy #content-bottom {padding:0 20px 10px;}
+.view-lac-lawsuits .views-row,.view-lac-practice-advisories .views-row, .view-lac-clearinghouse-newsletters .views-row,#front-bottom .views-row {padding: 10px 0; border-bottom:1px dashed #999;}
+.view-lac-lawsuits .views-row-first, .view-lac-practice-advisories .views-row-first, .view-lac-clearinghouse-newsletters .views-row-first,#front-bottom .views-row-first {padding: 0 0 10px 0;}
+.view-lac-lawsuits .views-row-last, .view-lac-practice-advisories .views-row-last, .view-lac-clearinghouse-newsletters .views-row-last, #front-bottom .views-row-last {border-bottom:none;padding:10px 0 0 0;}
+.view-lac-lawsuits .views-field-title, .view-lac-practice-advisories h2.title, .view-lac-clearinghouse-newsletters h2.title {font-size:110%; margin:0 0 10px 0;}
+.view-lac-clearinghouse-newsletters ul.links.inline {display:none;}
+/* advocacy topic block styles ================================================ */
+#block-block-30 {margin:15px 0 0 0;}
+#block-block-30 ul li {margin: 0 0 7px 0;}
+/* issues block styles ==================================================*/
+div.lac-issues {background:url(/sites/default/themes/lac/images/lac_issue_bak.png) top left repeat-y;color:#c41230;font-size:90%; padding:4px 4px 10px 15px;border:1px solid #dedede;}
+div.lac-issues h2 {padding-top:5px;color:#244254;}
+div.lac-issues select.quick_menu_select {margin:10px 0 0 0;font-size:100%;width:210px;}
+/* supreme court styles ================================================ */
+body.page-supreme-court-update #content-bottom {padding:0 20px 10px;}
+body.page-supreme-court-update #content-bottom .views-row, .view-lac-supreme-court-update .views-row {padding: 10px 0 0 0; border-bottom:1px dashed #999;}
+body.page-supreme-court-update #content-bottom .views-row-first, .view-lac-supreme-court-update .views-row-first {padding: 0;}
+body.page-supreme-court-update #content-bottom .views-row-last, .view-lac-supreme-court-update .views-row-last {border-bottom:none;}
+body.page-supreme-court-update #content-bottom .views-field-title, .view-lac-supreme-court-update .views-field-title, .view-lac-supreme-court-update h2 {font-size:110%; margin:0 0 10px 0;font-family:Georgia, Times, serif;}
+#block-views-873c3dc40cca9248a44c40ba598cdb14 .views-field-title {display:none;}
+body.page-supreme-court-update #content-bottom div.block-views {margin:25px 0 0 0;}
+body.page-supreme-court-update #content-bottom #block-views-ddf1952389c74493ee79126ad0b66e03 {margin:0;}
+/* generic block styles ================================================ */
+div.aic {background:url(/sites/default/themes/ipc/images/block_bak.png) top left repeat-y; padding:6px 10px; font-size:90%;border:1px solid #dedede;}
+div.aic h2 {display:block;background:#165477; color:#fff;font-size:125%; padding:5px;font-weight:bold;}
+div.cec {background:url(/sites/default/themes/ipc/images/block_bak.png) top left repeat-y; padding:6px 10px; font-size:90%;border:1px solid #dedede;}
+div.cec h2 {display:block;background:#fab974; color:#fff;font-size:125%; padding:5px;font-weight:bold;}
+div.iec {background:url(/sites/default/themes/ipc/images/block_bak.png) top left repeat-y; padding:6px 10px; font-size:90%;border:1px solid #dedede;}
+div.iec h2 {display:block;background:#89b77a; color:#fff;font-size:125%; padding:5px;font-weight:bold;}
+div.ipc {background:url(/sites/default/themes/ipc/images/block_bak.png) top left repeat-y; padding:6px 10px; font-size:90%; border:1px solid #dedede;}
+div.ipc h2 {display:block;background:#529bc9; color:#fff;font-size:125%; padding:5px;font-weight:bold;}
+div.lac {background:url(/sites/default/themes/ipc/images/block_bak.png) top left repeat-y; padding:6px 10px; font-size:90%;border:1px solid #dedede;}
+div.lac h2 {display:block;background:#d9766a; color:#fff;font-size:125%; padding:5px;font-weight:bold;}
+/* /generic block styles =============================================== */
+/* follow us block styles ============================================== */
+div.follow div.content {background:#fff;padding:4px 10px;color:#333;}
+div.follow h2 {text-indent:-9999px;height:13px;background: url(/sites/default/themes/ipc/images/follow_on.png) top left no-repeat;margin-left:10px;margin-bottom:4px;}
+div.follow div.content table td {padding:5px 0;font-size:120%;}
+div.follow div.content table td img {vertical-align:middle;}
+div.follow div.content a {font-weight:normal; color:#333;text-decoration:none;}
+div.follow div.content a:hover,div.follow div.content a:active {text-decoration:underline;}
+/* misc styles ========================================================= */
+.read-more {margin: 0 0 0 3px;}
+.field-field-lac-lawsuit-updated, .field-field-lac-topic-updated {margin: 0 0 10px 0;}
+.clear {clear:both;}
+#left-col .item-list .pager {text-align:right;font-size:90%;}
+#left-col li.pager-item:before, #left-col li.pager-current:before {content:"[";}
+#left-col li.pager-item:after,#left-col li.pager-current:after {content:"]";}
+#left-col .item-list ul li {margin:0;}
+#left-col .pager li.pager-first a.active, #left-col .pager li.pager-previous a.active, #left-col .pager li.pager-next a.active, #left-col .pager li.pager-last a.active {font-weight:bold;}
+.item-list .pager li {padding:2px;}
+div.node-type-lac-litigation-page h2 {background:url(/sites/default/themes/lac/images/issue_header-bak.png) top left no-repeat; height:29px; width:671px; color:#fff; margin:15px 0 15px -20px;font-weight:bold; padding:4px 0 0 10px;}
+div.node-type-lac-litigation-page p.toc {font-size:110%; margin-bottom:20px;}
+div.node-type-lac-litigation-page p.toc a {padding:0 4px;}
+div.node-type-lac-litigation-page p.toc a:first-child {padding:0 4px 0 0;}
+body.page-practice-advisory-topics .view-lac-practice-advisories .views-row {border:none;}
+body.page-practice-advisory-topics .view-lac-practice-advisories .views-row .views-field-title {font-size:110%;font-family:Georgia, Times, serif;}

@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * This module provides usability improvements to the node adminimstration 
+ * form found at /admin/content/node
+ */
+
+/**
+ * Implementation of hook_menu_alter().  Replaces the form accessed from 
+ * /admin/content/node with the better_node_admin_content form.
+ */
+function better_node_admin_content_menu_alter(&$callbacks) {
+  $callbacks['admin/content/node']['page arguments'] = array('better_node_admin_content');
+  $callbacks['admin/content/node']['file'] = 'better.node.admin.inc';
+  $callbacks['admin/content/node']['file path'] = drupal_get_path('module', 'better_node_admin_content');
+}
+
+/**
+ * Implementation of hook_init().  Adds CSS file used for form presentation
+ */
+function better_node_admin_content_init() {
+  drupal_add_css(drupal_get_path('module', 'better_node_admin_content') .'/better-node-admin.css');
+}
+
+/**
+ * Implementation of hook_theme().  Declares all theme functions defined 
+ * by this module.
+ */
+function better_node_admin_content_theme() {
+  return array(
+    'better_node_admin_nodes' => array(
+      'file' => 'better.node.admin.inc',
+    ),
+    'node_admin_column_title' => array(
+      'file' => 'node.inc',
+    ),
+    'node_admin_column_type' => array(
+      'file' => 'node.inc',
+    ),
+    'node_admin_column_author' => array(
+      'file' => 'node.inc',
+    ),
+    'node_admin_column_status' => array(
+      'file' => 'node.inc',
+    ),
+    'node_admin_column_date' => array(
+      'file' => 'node.inc',
+    ),
+    'node_admin_column_language' => array(
+      'file' => 'locale.inc',
+    ),
+  );
+}
+
+/**
+ * This function is used in all cases where one would previously call 
+ * module_invoke_all('node_operations').  This is due to the improved
+ * return format this module uses for confirming changes.
+ * 
+ * @return
+ *  An array of operations. Each operation is an associative array 
+ *  that may contain the following key-value pairs:
+ *  "label": Required. The label for the operation, displayed in the dropdown menu.
+ *  "callback": Required. The function to call for the operation.
+ *  "callback arguments": Optional. An array of additional arguments to pass to the callback function.
+ *  "confirmation": Optional. A string message used to confirm the operation
+ */
+function better_node_operations() {
+  $operations = module_invoke_all('node_operations');
+  $operations['delete'] = array(
+    'label' => t('Delete'),
+    'callback' => 'node_mass_delete',
+    'confirmation' => 'Are you sure you want to delete these items?',
+  );
+  return $operations;
+}

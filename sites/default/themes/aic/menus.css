@@ -1,0 +1,167 @@
+/******************************
+ Global CSS for ALL menus
+******************************/
+ul.nice-menu,
+ul.nice-menu ul {list-style: none; padding: 0;}
+ul.nice-menu { margin: 6px 0 5px 48px;position:relative;z-index:10000;}
+ul.nice-menu li { float: left;}
+ul.nice-menu li a {padding:5px 10px; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;}
+ul.nice-menu ul { top: 32px;  left: -2px; margin-right: 0; background:#fff;}
+ul.nice-menu ul li {}
+ul.nice-menu ul li a {color:#333;width:180px;line-height:1.5em;}
+ul.nice-menu-down {float: left;}
+ul.nice-menu-down li { }
+ul.nice-menu-down li li {}
+ul.nice-menu-down ul { left: 0;}
+ul.nice-menu-down ul li { clear: both;}
+ul.nice-menu-down li ul li ul {left: 12.5em; top: -1px;}
+ul.nice-menu-down .menuparent a {  padding-right: 15px;}
+ul.nice-menu-down li.menuparent {}
+ul.nice-menu-down li.menuparent:hover,ul.nice-menu-down li.over {}
+ul.nice-menu-down li li.menuparent {}
+ul.nice-menu-down li li.menuparent:hover,
+ul.nice-menu-down li li.over { }
+.sf-sub-indicator {display:none;}
+
+/* IPC Menu overrides ============================*/
+#navbar-ipc ul.nice-menu a.active,#navbar-ipc ul.nice-menu li.active-trail {background:#77b8d1;}
+#navbar-ipc ul.nice-menu { margin: 0px 0 0px 48px;}
+#navbar-ipc ul.nice-menu > li a {padding:0; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;text-indent:-9999px;}
+#navbar-ipc ul.nice-menu ul li a {border-right:none;width:180px; text-indent:0;padding:5px 10px;color:#333;}
+#navbar-ipc ul.nice-menu ul li a:hover,#navbar-ipc ul.nice-menu ul li a.active {color:#fff;background:#437389;}
+#navbar-ipc ul.nice-menu ul {border:1px solid #437389;}
+#navbar-ipc ul.nice-menu li#menu-1537 > a {background:url(/sites/default/themes/ipc/images/home_nav.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-ipc ul.nice-menu > li#menu-1537 > a:hover, #navbar-ipc ul.nice-menu > li#menu-1537 a.active {background:url(/sites/default/themes/ipc/images/home_nav_over.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1538 > a {background:url(/sites/default/themes/ipc/images/about_nav.gif) top left no-repeat; width:58px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1538 > a:hover {background:url(/sites/default/themes/ipc/images/about_nav_over.gif) top left no-repeat; width:58px; height:38px;}
+.menu-path-node-2.active-trail > a {background:url(/sites/default/themes/ipc/images/about_nav_over.gif) top left no-repeat!important; width:58px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-2788 > a {background:url(/sites/default/themes/ipc/images/issues_nav.gif) top left no-repeat; width:63px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-2788 > a:hover {background:url(/sites/default/themes/ipc/images/issues_nav_over.gif) top left no-repeat; width:63px; height:38px;}
+.menu-path-node-412.active-trail > a {background:url(/sites/default/themes/ipc/images/issues_nav_over.gif) top left no-repeat!important; width:63px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1540 > a {background:url(/sites/default/themes/ipc/images/nav_pubs.gif) top left no-repeat; width:191px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1540 > a:hover {background:url(/sites/default/themes/ipc/images/nav_pubs_over.gif) top left no-repeat; width:191px; height:38px;}
+.menu-path-node-4.active-trail > a {background:url(/sites/default/themes/ipc/images/nav_pubs_over.gif) top left no-repeat!important; width:191px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1541 > a {background:url(/sites/default/themes/ipc/images/nav_news.gif) top left no-repeat; width:95px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1541 > a:hover {background:url(/sites/default/themes/ipc/images/nav_news_over.gif) top left no-repeat; width:95px; height:38px;}
+.menu-path-node-5.active-trail > a {background:url(/sites/default/themes/ipc/images/nav_news_over.gif) top left no-repeat!important; width:95px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1544 > a {background:url(/sites/default/themes/ipc/images/nav_blog.gif) top left no-repeat; width:50px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1544 > a:hover {background:url(/sites/default/themes/ipc/images/nav_blog_over.gif) top left no-repeat; width:50px; height:38px;}
+.menu-path-immigrationimpact.com-.active-trail > a {background:url(/sites/default/themes/ipc/images/nav_blog_over.gif) top left no-repeat!important; width:50px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1542 > a {background:url(/sites/default/themes/ipc/images/nav_events.gif) top left no-repeat; width:64px; height:38px;}
+#navbar-ipc ul.nice-menu li#menu-1542 > a:hover {background:url(/sites/default/themes/ipc/images/nav_events_over.gif) top left no-repeat; width:64px; height:38px;}
+.menu-path-node-6.active-trail > a {background:url(/sites/default/themes/ipc/images/nav_events_over.gif) top left no-repeat!important; width:64px; height:38px;}
+/* IEC Menu overrides ===========================*/
+#navbar-iec ul.nice-menu li a:hover,#navbar-iec ul.nice-menu a.active,#navbar-iec ul.nice-menu li.active-trail {background:#8ecf84;}
+#navbar-iec ul.nice-menu { margin: 0px 0 0px 48px;}
+#navbar-iec ul.nice-menu > li a {padding:0; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;text-indent:-9999px;}
+#navbar-iec ul.nice-menu ul li a {border-right:none;width:180px;text-indent:0;padding:5px 10px;color:#333;}
+#navbar-iec ul.nice-menu ul li a:hover,#navbar-iec ul.nice-menu ul li a.active {color:#fff;background:#419639;}
+#navbar-iec ul.nice-menu ul {border:1px solid #419639;}
+#navbar-iec ul.nice-menu li#menu-2567 > a {background:url(/sites/default/themes/iec/images/home_nav.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-iec ul.nice-menu > li#menu-2567 > a:hover, #navbar-iec ul.nice-menu > li#menu-2567 a.active {background:url(/sites/default/themes/iec/images/home_nav_over.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2568 > a {background:url(/sites/default/themes/iec/images/about_nav.gif) top left no-repeat; width:58px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2568 > a:hover {background:url(/sites/default/themes/iec/images/about_nav_over.gif) top left no-repeat; width:58px; height:38px;}
+.menu-path-node-400.active-trail > a {background:url(/sites/default/themes/iec/images/about_nav_over.gif) top left no-repeat!important; width:58px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2569 > a {background:url(/sites/default/themes/iec/images/resources.gif) top left no-repeat; width:87px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2569 > a:hover {background:url(/sites/default/themes/iec/images/resources_over.gif) top left no-repeat; width:87px; height:38px;}
+.menu-path-node-401.active-trail > a {background:url(/sites/default/themes/iec/images/resources_over.gif) top left no-repeat!important; width:87px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2570 > a {background:url(/sites/default/themes/iec/images/apply_nav.gif) top left no-repeat; width:155px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2570 > a:hover {background:url(/sites/default/themes/iec/images/apply_nav_over.gif) top left no-repeat; width:155px; height:38px;}
+.menu-path-node-402.active-trail > a {background:url(/sites/default/themes/iec/images/apply_nav_over.gif) top left no-repeat!important; width:155px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2571 > a {background:url(/sites/default/themes/iec/images/news_nav.gif) top left no-repeat; width:94px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2571 > a:hover {background:url(/sites/default/themes/iec/images/news_nav_over.gif) top left no-repeat; width:94px; height:38px;}
+.menu-path-node-403.active-trail > a {background:url(/sites/default/themes/iec/images/news_nav_over.gif) top left no-repeat!important; width:94px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2572 > a {background:url(/sites/default/themes/iec/images/alumni_nav.gif) top left no-repeat; width:64px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-2572 > a:hover {background:url(/sites/default/themes/iec/images/alumni_nav_over.gif) top left no-repeat; width:64px; height:38px;}
+.menu-path-node-404.active-trail > a {background:url(/sites/default/themes/iec/images/alumni_nav_over.gif) top left no-repeat!important; width:64px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-10916 > a {background:url(/sites/default/themes/iec/images/blog.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-iec ul.nice-menu li#menu-10916 > a:hover {background:url(/sites/default/themes/iec/images/blog_over.gif) top left no-repeat; width:51px; height:38px;}
+/* AIC Menu overrides ========================== */
+#navbar-aic ul.nice-menu li a:hover,#navbar-aic ul.nice-menu a.active,#navbar-aic ul.nice-menu li.active-trail {background:#81a9bd;}
+#navbar-aic ul.nice-menu { margin: 0px 0 0px 20px;}
+#navbar-aic ul.nice-menu > li a {padding:0; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;text-indent:-9999px;}
+#navbar-aic ul.nice-menu ul li a {border-right:none;width:180px;text-indent:0;padding:5px 10px;color:#333;}
+#navbar-aic ul.nice-menu ul li a:hover,#navbar-aic ul.nice-menu ul li a.active {color:#fff;background:#437389;}
+#navbar-aic ul.nice-menu ul {border:1px solid #437389;}
+#navbar-aic ul.nice-menu li#menu-2807 > a {background:url(/sites/default/themes/aic/images/home_nav.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-aic ul.nice-menu > li#menu-2807 > a:hover, #navbar-aic ul.nice-menu > li#menu-2807 a.active {background:url(/sites/default/themes/aic/images/home_nav_over.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2808 > a {background:url(/sites/default/themes/aic/images/nav_who.gif) top left no-repeat; width:97px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2808 > a:hover {background:url(/sites/default/themes/aic/images/nav_who_over.gif) top left no-repeat; width:97px; height:38px;}
+.menu-path-node-426.active-trail > a {background:url(/sites/default/themes/aic/images/nav_who_over.gif) top left no-repeat!important; width:97px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2809 > a {background:url(/sites/default/themes/aic/images/support_nav.gif) top left no-repeat; width:96px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2809 > a:hover {background:url(/sites/default/themes/aic/images/support_nav_over.gif) top left no-repeat; width:96px; height:38px;}
+.menu-path-node-427.active-trail > a {background:url(/sites/default/themes/aic/images/support_nav_over.gif) top left no-repeat!important; width:96px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2810 > a {background:url(/sites/default/themes/aic/images/programs_nav.gif) top left no-repeat; width:88px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2810 > a:hover {background:url(/sites/default/themes/aic/images/programs_nav_over.gif) top left no-repeat; width:88px; height:38px;}
+.menu-path-node-428.active-trail > a {background:url(/sites/default/themes/aic/images/programs_nav_over.gif) top left no-repeat!important; width:88px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2811 > a {background:url(/sites/default/themes/aic/images/events_nav.gif) top left no-repeat; width:65px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2811 > a:hover {background:url(/sites/default/themes/aic/images/events_nav_over.gif) top left no-repeat; width:65px; height:38px;}
+.menu-path-node-429.active-trail > a {background:url(/sites/default/themes/aic/images/events_nav_over.gif) top left no-repeat!important; width:65px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2812 > a {background:url(/sites/default/themes/aic/images/news_nav.gif) top left no-repeat; width:112px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2812 > a:hover {background:url(/sites/default/themes/aic/images/news_nav_over.gif) top left no-repeat; width:112px; height:38px;}
+.menu-path-node-430.active-trail > a {background:url(/sites/default/themes/aic/images/news_nav_over.gif) top left no-repeat!important; width:112px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2813 > a {background:url(/sites/default/themes/aic/images/involved_nav.gif) top left no-repeat; width:103px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-2813 > a:hover {background:url(/sites/default/themes/aic/images/involved_nav_over.gif) top left no-repeat; width:103px; height:38px;}
+.menu-path-node-431.active-trail > a {background:url(/sites/default/themes/aic/images/involved_nav_over.gif) top left no-repeat!important; width:103px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-10912 > a {background:url(/sites/default/themes/aic/images/blog.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-aic ul.nice-menu li#menu-10912 > a:hover {background:url(/sites/default/themes/aic/images/blog_over.gif) top left no-repeat; width:51px; height:38px;}
+/* CEC Menu overrides ========================== */
+#navbar-cec ul.nice-menu li a:hover,#navbar-cec ul.nice-menu a.active,#navbar-cec ul.nice-menu li.active-trail {background:#f7c85d;}
+#navbar-cec ul.nice-menu { margin: 0px 0 0px 30px;}
+#navbar-cec ul.nice-menu > li a {padding:0; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;text-indent:-9999px;}
+#navbar-cec ul.nice-menu ul li a {border-right:none;width:180px;text-indent:0;padding:5px 10px;color:#333;}
+#navbar-cec ul.nice-menu ul li a:hover,#navbar-cec ul.nice-menu ul li a.active {color:#fff;background:#f4911e;}
+#navbar-cec ul.nice-menu ul {border:1px solid #f4911e;}
+#navbar-cec ul.nice-menu li#menu-2796 > a {background:url(/sites/default/themes/cec/images/home_nav.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-cec ul.nice-menu > li#menu-2796 > a:hover, #navbar-cec ul.nice-menu > li#menu-2796 a.active {background:url(/sites/default/themes/cec/images/home_nav_over.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2790 > a {background:url(/sites/default/themes/cec/images/about_nav.gif) top left no-repeat; width:58px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2790 > a:hover {background:url(/sites/default/themes/cec/images/about_nav_over.gif) top left no-repeat; width:58px; height:38px;}
+.menu-path-node-413.active-trail > a {background:url(/sites/default/themes/cec/images/about_nav_over.gif) top left no-repeat!important; width:58px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2791 > a {background:url(/sites/default/themes/cec/images/resources_nav.gif) top left no-repeat; width:92px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2791 > a:hover {background:url(/sites/default/themes/cec/images/resources_nav_over.gif) top left no-repeat; width:92px; height:38px;}
+.menu-path-node-414.active-trail > a {background:url(/sites/default/themes/cec/images/resources_nav_over.gif) top left no-repeat!important; width:92px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2792 > a {background:url(/sites/default/themes/cec/images/involved_nav.gif) top left no-repeat; width:105px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2792 > a:hover {background:url(/sites/default/themes/cec/images/involved_nav_over.gif) top left no-repeat; width:105px; height:38px;}
+.menu-path-node-415.active-trail > a {background:url(/sites/default/themes/cec/images/involved_nav_over.gif) top left no-repeat!important; width:105px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2793 > a {background:url(/sites/default/themes/cec/images/news_nav.gif) top left no-repeat; width:95px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-2793 > a:hover {background:url(/sites/default/themes/cec/images/news_nav_over.gif) top left no-repeat; width:95px; height:38px;}
+.menu-path-node-416.active-trail > a {background:url(/sites/default/themes/cec/images/news_nav_over.gif) top left no-repeat!important; width:95px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-5344 > a {background:url(/sites/default/themes/cec/images/community_nav.gif) top left no-repeat; width:185px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-5344 > a:hover {background:url(/sites/default/themes/cec/images/community_nav_over.gif) top left no-repeat; width:185px; height:38px;}
+.menu-path-community.active-trail > a {background:url(/sites/default/themes/cec/images/community_nav_over.gif) top left no-repeat!important; width:185px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-10918 > a {background:url(/sites/default/themes/cec/images/blog.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-cec ul.nice-menu li#menu-10918 > a:hover {background:url(/sites/default/themes/cec/images/blog_over.gif) top left no-repeat; width:51px; height:38px;}
+/* LAC Menu overrides ========================== */
+#navbar-lac ul.nice-menu li a:hover,#navbar-lac ul.nice-menu a.active,#navbar-lac ul.nice-menu li.active-trail {background:#de8588;}
+#navbar-lac ul.nice-menu { margin: 0px 0 0px 25px;}
+#navbar-lac ul.nice-menu > li a {padding:0; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;text-indent:-9999px;}
+#navbar-lac ul.nice-menu ul li a {border-right:none;width:180px;text-indent:0;padding:5px 10px;color:#333;}
+#navbar-lac ul.nice-menu ul li a:hover,#navbar-lac ul.nice-menu ul li a.active {color:#fff;background:#c41230;}
+#navbar-lac ul.nice-menu ul {border:1px solid #c41230;}
+#navbar-lac ul.nice-menu li#menu-2798 > a {background:url(/sites/default/themes/lac/images/home_nav.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-lac ul.nice-menu > li#menu-2798 > a:hover, #navbar-lac ul.nice-menu > li#menu-2798 a.active {background:url(/sites/default/themes/lac/images/home_nav_over.gif) top left no-repeat; width:54px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2799 > a {background:url(/sites/default/themes/lac/images/about_nav.gif) top left no-repeat; width:58px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2799 > a:hover {background:url(/sites/default/themes/lac/images/about_nav_over.gif) top left no-repeat; width:58px; height:38px;}
+.menu-path-node-419.active-trail > a {background:url(/sites/default/themes/lac/images/about_nav_over.gif) top left no-repeat!important; width:58px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2800 > a {background:url(/sites/default/themes/lac/images/litigation_nav.gif) top left no-repeat; width:202px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2800 > a:hover {background:url(/sites/default/themes/lac/images/litigation_nav_over.gif) top left no-repeat; width:202px; height:38px;}
+.menu-path-node-420.active-trail > a {background:url(/sites/default/themes/lac/images/litigation_nav_over.gif) top left no-repeat!important; width:202px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-3824 > a {background:url(/sites/default/themes/lac/images/practice_nav.gif) top left no-repeat; width:158px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-3824 > a:hover {background:url(/sites/default/themes/lac/images/practice_nav_over.gif) top left no-repeat; width:158px; height:38px;}
+.menu-path-practice-advisories.active-trail > a {background:url(/sites/default/themes/lac/images/practice_nav_over.gif) top left no-repeat!important; width:158px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2802 > a {background:url(/sites/default/themes/lac/images/clearing_nav.gif) top left no-repeat; width:196px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2802 > a:hover {background:url(/sites/default/themes/lac/images/clearing_nav_over.gif) top left no-repeat; width:196px; height:38px;}
+.menu-path-node-422.active-trail > a {background:url(/sites/default/themes/lac/images/clearing_nav_over.gif) top left no-repeat!important; width:196px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2803 > a {background:url(/sites/default/themes/lac/images/blog.gif) top left no-repeat; width:51px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2803 > a:hover {background:url(/sites/default/themes/lac/images/blog_over.gif) top left no-repeat; width:51px; height:38px;}
+.menu-path-node-423.active-trail > a {background:url(/sites/default/themes/lac/images/blog_over.gif) top left no-repeat!important; width:51px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2804 > a {background:url(/sites/default/themes/lac/images/news_nav.gif) top left no-repeat; width:95px; height:38px;}
+#navbar-lac ul.nice-menu li#menu-2804 > a:hover {background:url(/sites/default/themes/lac/images/news_nav_over.gif) top left no-repeat; width:95px; height:38px;}
+.menu-path-node-424.active-trail > a {background:url(/sites/default/themes/lac/images/news_nav_over.gif) top left no-repeat!important; width:95px; height:38px;}
+/* misc */
+.teaser-more {margin: 12px 0;}
+.inline {display:inline;}
+.share-wrapper {margin-left: 20px;}
+.page-news-media .share-wrapper, .page-news-room .share-wrapper,.page-supreme-court-update .share-wrapper,.page-community-education-center-news-room .share-wrapper,.page-iec-news-room .share-wrapper, .front .share-wrapper {margin-left: 0;margin-top:15px;}
+.section-search ul.tabs {display: none;}
+#google-cse-results iframe {height: 1250px;}

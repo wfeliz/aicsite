@@ -1,0 +1,9 @@
+name = Better Node Admin Content Form
+description = Provides usability improvments to the "Edit Content" Page
+core = 6.x
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-6.x-dev"
+core = "6.x"
+project = "better_node_admin_content"
+datestamp = "1298618881"
+

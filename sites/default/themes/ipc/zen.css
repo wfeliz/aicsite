@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+/* initial conditions ============================================== */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;font-family: inherit;}
+/* Tables still need 'cellspacing="0" in markup*/
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight:400; }
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+/* /initial conditions ============================================== */
+/* html tag styles ================================================== */
+body {color: #000000; background:#fff;}
+body,td,input,textarea,select,option {font: normal 12px/1.5em  Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;}
+p {margin: 5px 0px 10px 0px;line-height:1.5;}
+strong, em, b, i { font-family:  Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;}
+b {font-weight: bold;}
+i {font-style: italic;}
+u {text-decoration: underline;}
+small { font-size:90%;}
+.small {font-size:90%}
+a, a:visited {color:#971b1e;text-decoration: underline;	font-weight:bold;}
+a:hover, a:active {color: #6b9b43;}
+h1 {font-size: 180%;margin: 0px 0px 10px 0px;font-weight:normal;color:#96bc33; line-height:1.1;}
+h2 {font-size: 160%;margin: 0px 0px 10px 0px;font-weight:normal;color:#96bc33;}
+h3 {font-size: 130%;margin: 0px 0px 10px 0px;font-weight:bold;color:#96bc33;}
+h4 {font-size: 120%;margin: 0px 0px 5px 0px;font-weight:bold;color:#96bc33;}
+h5 {font-size: 110%;margin: 0px 0px 5px 0px;font-weight:bold;color:#96bc33;}
+h6 {font-size: 100%;font-weight: bold;margin: 0px 0px 5px 0px;}
+table.separate {border-collapse: separate;}
+th {font-weight:bold;}
+form table td {padding: 3px;}
+fieldset {border:none;margin:10px 0px;padding:5px 0px;}
+legend {padding: 0px 5px 0px 5px;}
+img {border-width: 0px;}
+pre { background-color: #eee; padding: 0.75em 1.5em; font-size: 12px; border: 1px solid #ddd;}
+code {font: 110% 'Courier New', Courier, Fixed;}
+acronym, abbr{font-size: 90%;letter-spacing: .07em;}
+/* /Tag styles ========================================================= */
+/* list styles ========================================================= */
+ul, ol {margin: 0px 0px 0px 8px;}
+ul {padding: 0px 0px 10px 0px;list-style:square;}
+ol {padding: 0px 0px 0px 25px;}
+#main .content li,#right_col li, #left_col .node-inner .content li, #state_left li, #state_right li {background-image:url(/sites/default/themes/star/images/bullet.gif);background-color: transparent;background-repeat: no-repeat;background-position:left 2px;padding: 0 0 0 16px;margin: 0 0px 5px 0px;list-style-type: none;}
+ul.links.inline li {background:none!important;}
+ul.links.inline {text-align:right; padding:0 0 10px 0;}
+
+/* /list styles ========================================================= */
+/* form ================================================================= */
+option {padding: 0px 5px 5px 0px;}
+label {font-weight: bold;}
+.required {color: #cc0000;}
+.auto {width: auto;}
+/* /form ================================================================= */
+/* margins and pads ======================================================== */
+.marg5 {margin: 5px}
+.marg10 {margin: 10px;}
+.marg15 {margin: 15px;}
+
+.margtop3 {margin-top: 3px;}
+.margright3 {margin-right: 3px;}
+.margbottom3 {margin-bottom: 3px;}
+.margleft3 {margin-left: 3px;}
+
+.margtop5 {margin-top: 5px;}
+.margright5 {margin-right: 5px;}
+.margbottom5 {margin-bottom: 5px;}
+.margleft5 {margin-left: 5px;}
+
+.margtop10 {margin-top: 10px;}
+.margright10 {margin-right: 10px;}
+.margbottom10 {margin-bottom: 10px;}
+.margleft10 {margin-left: 10px;}
+
+.margtop15 {margin-top: 15px;}
+.margright15 {margin-right: 15px;}
+.margbottom15 {margin-bottom: 15px;}
+.margleft15 {margin-left: 15px;}
+
+.margtop20 {margin-top: 20px;}
+.margright20 {margin-right: 20px;}
+.margbottom20 {margin-bottom: 20px;}
+.margleft20 {margin-left: 20px;}
+
+.margtop25 {margin-top: 25px;}
+.margright25 {margin-right: 25px;}
+.margbottom25 {margin-bottom: 25px;}
+.margleft25 {margin-left: 25px;}
+
+.margbottom35 {margin-bottom: 35px;}
+
+.padtop3 {padding-top: 3px;}
+.padright3 {padding-right: 3px;}
+.padbottom3 {padding-bottom: 3px;}
+.padleft3 {padding-left: 3px;}
+
+.padtop5 {padding-top: 5px;}
+.padright5 {padding-right: 5px;}
+
+.padbottom5 {padding-bottom: 5px;}
+.padleft5 {padding-left: 5px;}
+
+.padtop10 {padding-top: 10px;}
+.padright10 {padding-right: 10px;}
+.padbottom10 {padding-bottom: 10px;}
+.padleft10 {padding-left: 10px;}
+
+.padtop15 {padding-top: 15px;}
+.padright15 {padding-right: 15px;}
+.padbottom15 {padding-bottom: 15px;}
+.padleft15 {padding-left:15px;}
+
+.padtop20 {padding-top: 20px;}
+.padright20 {padding-right: 20px;}
+.padbottom20 {padding-bottom: 20px;}
+.padleft20 {padding-left:20px;}
+
+.padbottom25 {padding-bottom:25px;}
+.padbottom45 {padding-bottom:45px;}
+.padbottom60 {padding-bottom:60px;}
+
+.padleft15 {padding-left: 15px;}
+.padleft25 {padding-left:25px;}
+.padleft35 {padding-left:35px;}
+
+.pad5 {padding: 5px;}
+.pad10 {padding: 10px;}
+.pad15 {padding: 15px;}
+
+table.tblpad3 td {padding: 3px;}
+table.tblpad5 td {padding: 5px;}
+
+.tablepad td {padding:5px;}
+/* /shims and pads ======================================================== */
+/* layout styles ========================================================== */
+#skipnav, #skip-to-nav {margin-left:-9999px;height:1px;}
+#page {width:960px;margin:0 auto; background:url(/sites/default/themes/ipc/images/bak.png) top left repeat;min-height:2000px;}

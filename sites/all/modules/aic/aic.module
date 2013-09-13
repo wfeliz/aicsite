@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Module for random fixes for the AIC site.
+ *
+ */
+
+function aic_form_alter(&$form, $form_state, $form_id) {
+ if ($form['#id'] == 'search-block-form') {
+ 		//$form_state['redirect'] = 'search/google/'. trim($form_state['values'][$form_id]);
+		//dpm($form);
+		//dpm($form_state);
+	}
+}

@@ -1,0 +1,11 @@
+; $Id: csmsearchexclude.info,v 1.0 2010/02/15 16:59:58 jareds Exp $
+name = "AIC Search Exclude"
+description = "Exclude certain Content Types from search results"
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-10-13
+version = "6.x-1.0"
+core = "6.x"
+project = "AIC searchexclude"
+datestamp = "1266251613"
+

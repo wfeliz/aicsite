@@ -1,0 +1,11 @@
+name = Update status advanced settings
+description = Adds advanced settings and extra functionality to the Update status module in core.
+core = 6.x
+dependencies[] = update
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "update_advanced"
+datestamp = "1298620553"
+
