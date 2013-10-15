@@ -568,7 +568,7 @@ function admin_menu_output() {
  * @param $depth
  *   Current recursion level; internal use only.
  */
-function theme_admin_menu_links(&$elements, $depth = 0) {
+function theme_admin_menu_links($elements, $depth = 0) {
   static $destination;
 
   if (!isset($destination)) {
