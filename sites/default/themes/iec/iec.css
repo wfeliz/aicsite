@@ -172,19 +172,22 @@ div.search form table td {padding:0 2px 0 0;}
 .search-text {background: url(/sites/default/themes/ipc/images/search_input_bak.png) top left no-repeat; height:20px; width:168px;border:0;}
 /* / search form styles =================================================*/
 /* front page tab styles =============================================== */
-body.front #content-top {overflow:hidden; background:#fff;}
-.view-iec-front-tabs h2 {color:#419639;}
-.view-iec-front-tabs h2.title {display:none;}
-.view-iec-front-tabs ul.links.inline {display:none;}
-#content-top ul.ui-tabs-nav {list-style:none; display:block;padding:0; width:681px; height:29px; font-size:110%; margin:0;}
-#content-top ul.ui-tabs-nav li {padding:0; height:29px; margin:0;list-style:none;float:left;}
-#content-top ul.ui-tabs-nav a {text-decoration:none; color:#419639; display:block; width:227px; height:24px; padding:5px 0 0 0; text-align:center; background:url(/sites/default/themes/iec/images/tab_bak.png) top left no-repeat;}
-#content-top ul.ui-tabs-nav a:hover, ul.ui-tabs-nav a:active {background:url(/sites/default/themes/iec/images/tab_bak_active.png) top left no-repeat; color:#fff;}
-#content-top ul.ui-tabs-nav li.ui-tabs-selected a {background:url(/sites/default/themes/iec/images/tab_bak_active.png) top left no-repeat; color:#fff;}
-.ui-tabs-hide {display:none}
-.ui-tabs-panel {padding:8px;background:#fff;height:255px;}
-.tab-text {float:left; width:300px;margin:0 10px 0 0;}
-.iec-tab-image {float:right; width:326px;}
+body.front #content-top {overflow:hidden; background:#ededed;padding: 5px;}
+.views_slideshow_singleframe_main .overlay {width: 165px;height: 250px;position: relative;float: right;margin: -305px 0 0 0;padding: 25px;background: #333;opacity: .9; -moz-opacity: .9;-webkit-opacity: .9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter: alpha(opacity=90);color: #fff;}
+.views_slideshow_singleframe_main .overlay h3.tab-headline {font-family: Arial,Helvetica,sans-serif;font-weight: normal;opacity: 1; -moz-opacity: 1;-webkit-opacity: 1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);}
+.views_slideshow_singleframe_main .overlay h3.tab-headline a {color: #fff;text-decoration: none;}
+.views_slideshow_singleframe_main .overlay h3.tab-headline a:hover {text-decoration: underline}
+.views_slideshow_singleframe_main .overlay .tab-text, .views_slideshow_singleframe_main .overlay .tab-link {font-size: 13px;}
+.views_slideshow_singleframe_main .overlay .tab-link a {text-decoration: none;color: #fff200;}
+.views_slideshow_singleframe_main .overlay .tab-link a:hover {text-decoration: underline;}
+.front .views-slideshow-controls-bottom {float: right;position: relative;margin: -60px 54px 0 0;z-index: 10}
+.front .views_slideshow_pause {display: none;}
+.front .views_slideshow_previous {float: left;position:relative;right:14px;top:14px;text-indent: 100%;white-space: nowrap;overflow: hidden;background: url(/sites/default/themes/aic/images/arrow.png) left top no-repeat;width: 7px; height: 10px;}
+.front .views_slideshow_next {float: right;position:relative;left:10px;top:14px;text-indent: 100%;white-space: nowrap;overflow: hidden;background: url(/sites/default/themes/aic/images/arrow-right.png) left top no-repeat;width: 7px; height: 10px}
+.front .views_slideshow_pagerNumbered .activeSlide {border: 1px solid #fff200!important;}
+.front .views_slideshow_pagerNumbered .activeSlide a {color: #fff200!important;}
+.front .views_slideshow_pagerNumbered .pager-item {padding: 2px 4px;border: 1px solid #fff;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;margin: 0 3px 0 0;font-size: 11px} 
+.front .views_slideshow_pagerNumbered .pager-item a {color: #fff;text-decoration: none;}
 /* news room styles =====================================================*/
 .view-iec-newsletters .views-row, .view-iec-advisories .views-row,.view-iec-other-news .views-row  {padding: 10px 0 0 0; border-bottom:1px dashed #999;}
 .view-iec-newsletters .views-row-first, .view-iec-advisories .views-row-first, .view-iec-other-news .views-row-first {padding: 0;}
