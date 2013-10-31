@@ -263,3 +263,101 @@ div.node-type-lac-litigation-page p.toc a {padding:0 4px;}
 div.node-type-lac-litigation-page p.toc a:first-child {padding:0 4px 0 0;}
 body.page-practice-advisory-topics .view-lac-practice-advisories .views-row {border:none;}
 body.page-practice-advisory-topics .view-lac-practice-advisories .views-row .views-field-title {font-size:110%;font-family:Georgia, Times, serif;}
+#top-bar-inner {
+    width:940px;
+    padding:0 10px;
+    margin:0 auto;
+}
+#top-bar {
+    height:40px;
+    background-color:#333;
+    color:#fff;
+}
+
+
+#top-bar .block {
+  float:left;
+}
+
+#block-menu-menu-aic-global-link {
+  width:538px;
+}
+#block-quickmenu-menu-sites-menu {
+  width:302px;
+}
+#block-menu-menu-contact-us {
+  width:100px;
+}
+#block-menu-menu-contact-us .content {
+  padding:0 3px 0 0;
+}
+#top-bar .block .content ul.menu,
+#top-bar .block .content ul.menu li {
+  margin:0;
+  padding:0;
+}
+
+#top-bar .block .content ul.menu li {
+  list-style:none;
+}
+
+#top-bar .block .content ul.menu li a {
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  line-height:40px;
+  font-weight:normal;
+}
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li {
+  padding:0 0 0 15px;
+}
+#top-bar #block-menu-menu-contact-us .content ul.menu li {
+  text-align:right;
+  padding:0 10px 0 0;
+}
+#top-bar #block-menu-menu-contact-us .content ul.menu li a,
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
+  border-bottom:1px solid #fff;
+}
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
+  font-weight:bold;
+}
+#top-bar #block-menu-menu-contact-us .content ul.menu li a {
+  font-style:italic;
+}
+
+#block-quickmenu-menu-sites-menu select.quick_menu_select {
+  font-size:12px;
+  margin: 10px 0 0 10px;
+  line-height: .9em;
+  border: 1px solid 
+  #dcdcdc;
+  height:23px;
+  width: 200px;
+}
+
+#block-quickmenu-menu-sites-menu h2.title {
+    font-family: Helvetica, Verdana, sans-serif;
+    float:left;
+    line-height:40px;
+    margin:0;
+    font-weight:normal;
+    font-size:18px;
+}
+
+#block-quickmenu-menu-sites-menu .content {
+    float:left;
+}
+body{
+    padding-top:40px !important;
+}
+#top-bar {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
+.admin-menu #top-bar {
+  top:20px;
+}

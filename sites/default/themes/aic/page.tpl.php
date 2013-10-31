@@ -91,11 +91,11 @@
 </head>
 <body class="<?php print $body_classes; ?>">
 <div id="skipnav"><a href="#content">Skip to Content</a></div>
-    <?php if ($top_bar): ?>
-  <div id="top-bar"><div id="top-bar-inner" class="region region-top-bar">
-    <?php print $top_bar; ?>
-  </div></div> <!-- /#top-bar-inner, /#top-bar -->
-<?php endif; ?>
+  <?php if ($top_bar): ?>
+    <div id="top-bar"><div id="top-bar-inner" class="region region-top-bar">
+      <?php print $top_bar; ?>
+    </div></div> <!-- /#top-bar-inner, /#top-bar -->
+  <?php endif; ?>
   <div id="page"><div id="page-inner">
   
     <a name="top" id="navigation-top"></a>

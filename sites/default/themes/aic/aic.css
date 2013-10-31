@@ -257,7 +257,7 @@ div.follow div.content a:hover,div.follow div.content a:active {text-decoration:
 }
 #top-bar {
     height:40px;
-    background-color:#5b6770;
+    background-color:#333;
     color:#fff;
 }
 
@@ -267,10 +267,10 @@ div.follow div.content a:hover,div.follow div.content a:active {text-decoration:
 }
 
 #block-menu-menu-aic-global-link {
-  width:510px;
+  width:538px;
 }
 #block-quickmenu-menu-sites-menu {
-  width:330px;
+  width:302px;
 }
 #block-menu-menu-contact-us {
   width:100px;
@@ -291,19 +291,24 @@ div.follow div.content a:hover,div.follow div.content a:active {text-decoration:
 #top-bar .block .content ul.menu li a {
   color:#fff;
   text-decoration:none;
-  font-size:18px;
+  font-size:14px;
   line-height:40px;
   font-weight:normal;
 }
-
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li {
+  padding:0 0 0 15px;
+}
 #top-bar #block-menu-menu-contact-us .content ul.menu li {
   text-align:right;
+  padding:0 10px 0 0;
 }
 #top-bar #block-menu-menu-contact-us .content ul.menu li a,
 #top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
-  border-bottom:2px solid #fff;
+  border-bottom:1px solid #fff;
 }
-
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
+  font-weight:bold;
+}
 #top-bar #block-menu-menu-contact-us .content ul.menu li a {
   font-style:italic;
 }
@@ -315,6 +320,7 @@ div.follow div.content a:hover,div.follow div.content a:active {text-decoration:
   border: 1px solid 
   #dcdcdc;
   height:23px;
+  width: 200px;
 }
 
 #block-quickmenu-menu-sites-menu h2.title {

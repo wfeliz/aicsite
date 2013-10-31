@@ -45,6 +45,7 @@ conditional-stylesheets[if lte IE7][all][] = iefixes.css
   ; page.tpl.php template.
 regions[right]          = right sidebar
 regions[navbar]         = navigation bar
+regions[top_bar]        = top bar
 regions[content_top]    = content top
 regions[content_bottom] = content bottom
 regions[header]         = header
