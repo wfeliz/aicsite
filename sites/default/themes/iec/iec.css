@@ -459,7 +459,9 @@ body{
     width:100%;
     z-index:100;
 }
-
+.fixfixed #top-bar { 
+    position: absolute; 
+} 
 .admin-menu #top-bar {
   top:20px;
 }

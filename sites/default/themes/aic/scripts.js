@@ -6,3 +6,16 @@ $(document).ready(function() {
 		});	
 
 });
+var is_touch_device = 'ontouchstart' in document.documentElement;
+Drupal.behaviors.fixTopBarMobile = function(context){
+  var $body = $('body');
+  if (is_touch_device) {
+    $('input, select')
+      .focus(function(e) {
+        $body.addClass('fixfixed');
+      })
+    .blur(function(e) {
+        $body.removeClass('fixfixed');
+    });
+  }
+};
