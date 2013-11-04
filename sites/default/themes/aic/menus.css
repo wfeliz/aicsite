@@ -3,7 +3,7 @@
 ******************************/
 ul.nice-menu,
 ul.nice-menu ul {list-style: none; padding: 0;}
-ul.nice-menu { margin: 6px 0 5px 48px;position:relative;z-index:10000;}
+ul.nice-menu { margin: 6px 0 5px 48px;position:relative;z-index:50;}
 ul.nice-menu li { float: left;}
 ul.nice-menu li a {padding:5px 10px; color:#fff; font-size:110%;font-weight:bold;text-decoration:none;display:block;}
 ul.nice-menu ul { top: 32px;  left: -2px; margin-right: 0; background:#fff;}
