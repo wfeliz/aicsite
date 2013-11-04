@@ -267,10 +267,10 @@ body.page-practice-advisory-topics .view-lac-practice-advisories .views-row .vie
     width:940px;
     padding:0 10px;
     margin:0 auto;
+    background-color:#333;
 }
 #top-bar {
     height:40px;
-    background-color:#333;
     color:#fff;
 }
 
@@ -315,8 +315,8 @@ body.page-practice-advisory-topics .view-lac-practice-advisories .views-row .vie
   text-align:right;
   padding:0 10px 0 0;
 }
-#top-bar #block-menu-menu-contact-us .content ul.menu li a,
-#top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
+#top-bar #block-menu-menu-contact-us .content ul.menu li a:hover,
+#top-bar #block-menu-menu-aic-global-link .content ul.menu li a:hover {
   border-bottom:1px solid #fff;
 }
 #top-bar #block-menu-menu-aic-global-link .content ul.menu li a {
@@ -342,7 +342,7 @@ body.page-practice-advisory-topics .view-lac-practice-advisories .views-row .vie
     line-height:40px;
     margin:0;
     font-weight:normal;
-    font-size:18px;
+    font-size:14px;
 }
 
 #block-quickmenu-menu-sites-menu .content {
