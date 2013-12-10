@@ -3,7 +3,7 @@
 #
 
 # Protect files and directories from prying eyes.
-<FilesMatch "\.(engine|inc|info|install|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl|svn-base)$|^(code-style\.pl|Entries.*|Repository|Root|Tag|Template|all-wcprops|entries|format)$">
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl|svn-base)$|^(code-style\.pl|Entries.*|Repository|Root|Tag|Template|all-wcprops|entries|format)$">
   Order allow,deny
 </FilesMatch>
 
@@ -21,8 +21,6 @@ ErrorDocument 404 /index.php
   # There is no end quote below, for compatibility with Apache 1.3.
   ErrorDocument 404 "The requested file favicon.ico was not found.
 </Files>
-
-# Set the default handler.
 
 # Override PHP settings. More in sites/default/settings.php
 # but the following cannot be changed at runtime.
@@ -55,10 +53,10 @@ ErrorDocument 404 /index.php
   php_value mbstring.http_input             pass
   php_value mbstring.http_output            pass
   php_value mbstring.encoding_translation   0
-  php_value memory_limit					192M
-  php_value upload_max_filesize 			30M
-php_flag display_startup_errors off
-php_flag display_errors off
+  php_value memory_limit          256M
+  php_value upload_max_filesize   30M
+  php_flag display_startup_errors on
+  php_flag display_errors on
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -69,8 +67,14 @@ php_flag display_errors off
   # Cache all files for 2 weeks after access (A).
   ExpiresDefault A1209600
 
-  # Do not cache dynamically generated pages.
-  ExpiresByType text/html A1
+  <FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior. This may
+    # fail if an error occurs early in the bootstrap process, and it may cause
+    # problems if a non-Drupal PHP file is installed in a subdirectory.
+    ExpiresActive Off
+  </FilesMatch>
 </IfModule>
 
 # Various rewrite rules.
@@ -110,5 +114,7 @@ php_flag display_errors off
   RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 </IfModule>
 
-# $Id: .htaccess,v 1.90.2.3 2008/12/10 20:04:08 goba Exp $
+# $Id$
+# Set the default handler.
 DirectoryIndex index.php
+
