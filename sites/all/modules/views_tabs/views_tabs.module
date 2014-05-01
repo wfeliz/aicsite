@@ -1,5 +1,5 @@
 <?php
-// $Id: views_tabs.module,v 1.3.2.1 2008/12/15 20:55:24 jerdavis Exp $
+// $Id: views_tabs.module,v 1.3.2.2 2010/01/25 17:43:11 jdwfly Exp $
 
 /**
  * @file
@@ -13,10 +13,11 @@ function views_tabs_menu() {
   $items = array();
   $items['admin/settings/viewstabs'] = array(
     'title' => 'Views Tabs',
+    'description' => t('Configure settings for Views Tabs'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('views_tabs_admin_settings'),
     'access arguments' => array('administer site configuration'),
-    'type' => MENU_LOCAL_TASK,
+    'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;

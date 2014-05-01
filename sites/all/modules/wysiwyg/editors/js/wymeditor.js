@@ -1,4 +1,4 @@
-// $Id: wymeditor.js,v 1.2.2.1 2009/07/04 11:06:45 sun Exp $
+(function($) {
 
 /**
  * Attach this editor to a target element.
@@ -52,3 +52,5 @@ Drupal.wysiwyg.editor.instance.wymeditor = {
     }
   }
 };
+
+})(jQuery);

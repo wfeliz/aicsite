@@ -1,4 +1,5 @@
 <?php
+// $Id: semanticviews.views.inc,v 1.1.2.4 2010/04/10 04:07:25 bangpound Exp $
 
 /**
  * Implementation of hook_views_plugins().

@@ -1,13 +1,11 @@
 <?php
 class views_tabs_plugin_style extends views_plugin_style {
-
   function options(&$options) {
     parent::options($options);
     if ($this->row_plugin->definition['uses fields']) {
       $options['tab_field'] = 'title';
     }
   }
- 
   function options_form(&$form, &$form_state) {
     parent::options_form($form, $form_state);
     if ($this->uses_fields() && $this->definition['uses grouping']) {
@@ -29,46 +27,62 @@ class views_tabs_plugin_style extends views_plugin_style {
       );
     }
   }
-  
   function render() {
     $this->definition['theme'] = $this->row_plugin->definition['theme'];
-    // Create empty tabset to build up
-     
+    if ($this->uses_row_plugin() && empty($this->row_plugin)) {
+      vpr('views_plugin_style_default: Missing row plugin');
+      return;
+    }
     $tabset = array(
       '#type' => 'tabset',
+      '#sorted' => true,
     );
-
-    if ($this->row_plugin->definition['uses fields']) {
-      // Get a list of the available fields.  
-      $_fields = array_keys($this->view->field);
-    
-      // If title is the tab, and there is no title - assign the first field
-      if (!$this->view->field['title'] 
-            && $this->options['tab_field'] == 'title') {
-        $this->options['tab_field'] = $_fields[0];
+    // Group the rows according to the grouping field, if specified.
+    $sets = $this->render_grouping($this->view->result, $this->options['grouping']);
+    // Render each group separately and concatenate.  Plugins may override this
+    // method if they wish some other way of handling grouping.
+    $output = '';
+    $this->view->row_index = 0;
+    foreach ($sets as $title => $records) {
+      $content = '';
+      if ($this->uses_row_plugin()) {
+        $rows = array();
+        foreach ($records as $label => $row) {
+          if ($this->uses_fields()) {
+            $content .= theme($this->theme_functions(), $this->view, $this->options, $this->row_plugin->render($row));
+          } else {
+            $node = node_load($row->nid);
+            $node->view = $this->view;
+            $options = $this->row_plugin->options;
+            $node->build_mode = ($options['build_mode'] == 'teaser' || $options['build_mode'] == 'full') ? NODE_BUILD_NORMAL : $options['build_mode'];
+            $content = node_view($node, $options['build_mode'] == 'teaser', FALSE, $options['links']);
+            $title = $node->title;
+            if (!$tabset[$title]) {
+              $tabset[$title] = array(
+                '#type' => 'tabpage',
+                '#content' => $content,
+                '#title' => $title,
+                '#attributes' => array('class' => 'tab-title'),
+              );
+            }
+          }
+          $this->view->row_index++;
+        }
+      } else {
+        $rows = $records;
       }
-      $tab_field = $this->view->field[$this->options['tab_field']]->field_alias;
-    }
-    foreach ($this->view->result as $row) {
-      if ($this->row_plugin->definition['uses fields']) {
-        $content = theme($this->theme_functions(), $this->view, $this->options, $row);
-        $tab = $row->$tab_field;
-      }
-      else {
-        $node = node_load($row->nid);
-        $content = node_view($node, $this->row_plugin->options['teaser'], FALSE, $this->row_plugin->options['links']);
-        $tab = $node->title;
-      }
-   
-      if (!$tabset[$tab]) {
-        $tabset[$tab] = array(
+      if (!$tabset[$title] && $this->uses_fields()) {
+        $tabset[$title] = array(
           '#type' => 'tabpage',
           '#content' => $content,
-          '#title' => $tab,
-          '#attributes' => array('class' => 'node-'. $row->nid),
+          '#title' => $title,
+          '#attributes' => array('class' => 'tab-title'),
         );
+      } else if ($this->uses_fields()) {
+        $tabset[$title]['#content'] .= $content;
       }
     }
-    return tabs_render($tabset); 
+    unset($this->view->row_index);
+    return drupal_render($tabset);
   }
 }

@@ -1,10 +1,22 @@
-/* $Id: CHANGELOG.txt,v 1.1.2.39 2009/11/08 23:45:30 aaron Exp $ */
+/* $Id: CHANGELOG.txt,v 1.1.2.47 2010/01/06 16:53:47 aaron Exp $ */
 
 /**
  *  @file
  *  Changelog for Embedded Video Field (emvideo).
  */
 
+by aaron: Tweak spike's regex.
+by aaron: Fix spike's emvideo_PROVIDER_embedded_link.
+by aaron: Fix metacafe's emvideo_PROVIDER_embedded_link.
+#663836 by ressa: Fix typo in youtube.inc.
+
+================
+ DRUPAL-6--1-18
+================
+
+#612406 by cityreader: Fix RegEx pattern bug in provider Tudou.
+by aaron: Add wmode transparent to YouTube w/ raw flvplayer.
+by aaron: Add Kitten Killers to YouTube devel generate...
 #601944 by aaron: Fix EM Video 1.4 -> 1.11 update stuck.
 by aaron: Add name to youtube object w/ raw flvmediaplayer to avoid IE error.
 

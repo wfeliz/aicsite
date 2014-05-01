@@ -1,5 +1,5 @@
 <?php
-// $Id: emimage.theme.inc,v 1.1.2.6 2009/09/21 16:20:09 aaron Exp $
+// $Id: emimage.theme.inc,v 1.1.2.9 2010/11/17 16:33:33 aaron Exp $
 
 /**
  *  @file
@@ -9,8 +9,24 @@
 /**
  *  Helper theme for various emimage themes.
  */
-function theme_emimage_image($field, $item, $formatter, $node, $code, $width, $height, $title = '', $link = NULL, $options = array()) {
-  $url = module_invoke('emfield', 'include_invoke', 'emimage', $item['provider'], 'image_url', $code, $width, $height, $formatter, $field, $item, $node);
+function theme_emimage_image($field, $item, $formatter, $node, $code, $width = NULL, $height = NULL, $title = '', $link = NULL, $options = array()) {
+  // Get a thumbnail URL. This can be an override through $options['thumbnail_url'],
+  // defined by the provider (the usual case), or a default image.
+  if (isset($options['thumbnail_url']) || ($item['value'] && $item['provider'])) {
+    // If we've set $options['thumbnail_url'], then we'll just use that.
+    $url = isset($options['thumbnail_url']) ? $options['thumbnail_url'] : '';
+
+    // Otherwise, if we have emthumb installed, then give it a chance to override our thumbnail.
+    if (empty($url) && function_exists('emthumb_thumbnail_path')) {
+      $url = emthumb_thumbnail_path($item);
+    }
+
+    // If we don't have a custom thumbnail, then see if the provider gives us a thumbnail.
+    if (empty($url)) {
+      $url = module_invoke('emfield', 'include_invoke', 'emimage', $item['provider'], 'image_url', $code, $width, $height, $formatter, $field, $item, $node);
+    }
+  }
+
   $attributes = array();
   if ($width) {
     $attributes['width'] = $width;
@@ -60,7 +76,7 @@ function theme_emimage_image_thumbnail($field, $item, $formatter, $node, $option
     $code = $item['value'];
     $width = isset($options['width']) ? $options['width'] : $field['widget']['thumbnail_width'];
     $height = isset($options['height']) ? $options['height'] : $field['widget']['thumbnail_height'];
-    $link = isset($options['preview_link']) ? $options['preview_link'] : $field['widget']['preview_link'];
+    $link = isset($options['thumbnail_link']) ? $options['thumbnail_link'] : $field['widget']['thumbnail_link'];
     if ($link == EMIMAGE_LINK_CONTENT) {
       $link = 'node/'. $node->nid;
     }
@@ -89,7 +105,7 @@ function theme_emimage_image_full($field, $item, $formatter, $node, $options = a
     $code = $item['value'];
     $width = isset($options['width']) ? $options['width'] : $field['widget']['full_width'];
     $height = isset($options['height']) ? $options['height'] : $field['widget']['full_height'];
-    $link = isset($options['preview_link']) ? $options['preview_link'] : $field['widget']['preview_link'];
+    $link = isset($options['full_link']) ? $options['full_link'] : $field['widget']['full_link'];
     if ($link == EMIMAGE_LINK_CONTENT) {
       $link = 'node/'. $node->nid;
     }

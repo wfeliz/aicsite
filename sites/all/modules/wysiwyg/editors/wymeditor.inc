@@ -1,5 +1,4 @@
 <?php
-// $Id: wymeditor.inc,v 1.4.2.1 2009/08/03 22:37:15 sun Exp $
 
 /**
  * @file
@@ -14,7 +13,7 @@ function wysiwyg_wymeditor_editor() {
     'title' => 'WYMeditor',
     'vendor url' => 'http://www.wymeditor.org/',
     'download url' => 'http://www.wymeditor.org/download/',
-    'library path' => wysiwyg_get_path('wymeditor/wymeditor'),
+    'library path' => wysiwyg_get_path('wymeditor') . '/wymeditor',
     'libraries' => array(
       'min' => array(
         'title' => 'Minified',
@@ -53,6 +52,9 @@ function wysiwyg_wymeditor_editor() {
  */
 function wysiwyg_wymeditor_version($editor) {
   $script = $editor['library path'] . '/jquery.wymeditor.js';
+  if (!file_exists($script)) {
+    return;
+  }
   $script = fopen($script, 'r');
   fgets($script);
   $line = fgets($script);
@@ -110,10 +112,10 @@ function wysiwyg_wymeditor_settings($editor, $config, $theme) {
   }
 
   // Add configured buttons.
+  $settings['toolsItems'] = array();
   if (!empty($config['buttons'])) {
     $buttoninfo = _wysiwyg_wymeditor_button_info();
     $plugins = wysiwyg_get_plugins($editor['name']);
-    $settings['toolsItems'] = array();
     foreach ($config['buttons'] as $plugin => $buttons) {
       foreach ($buttons as $button => $enabled) {
         // Iterate separately over buttons and extensions properties.

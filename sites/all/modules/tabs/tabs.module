@@ -1,5 +1,5 @@
 <?php
-// $Id: tabs.module,v 1.15 2009/08/19 14:19:34 nedjo Exp $
+// $Id: tabs.module,v 1.27 2010/01/18 08:11:21 nedjo Exp $
 
 /**
  * @file
@@ -58,11 +58,14 @@ function tabs_pre_render_tabset($element) {
 
   $children = element_children($element);
 
-  $num_items = count($children);
   foreach ($children as $index => $key) {
     if (isset($element[$key]['#type']) && $element[$key]['#type'] == 'tabpage') {
       if (!isset($element[$key]['#content'])) {
         $element[$key]['#content'] = '';
+      }
+      if (isset($element[$key]['#description']) && $element[$key]['#description']) {
+        $element[$key]['#content'] = '<div class="description">'. $element[$key]['#description'] .'</div>' . $element[$key]['#content'];
+        unset($element[$key]['#description']);
       }
       $is_ajax = isset($element[$key]['#ajax_url']) && $element[$key]['#ajax_url'];
       // Unset any empty tabs.
@@ -71,14 +74,19 @@ function tabs_pre_render_tabset($element) {
         unset($element[$key]);
         continue;
       }
-      // Display any #description before the #content.
-      $element[$key]['#content'] = (isset($element[$key]['#description']) && $element[$key]['#description'] ? '<div class="description">'. $element[$key]['#description'] .'</div>' : '') . $element[$key]['#content'];
       $element[$key]['#tabset_name'] = $element['#tabset_name'];
-      $element[$key]['#title'] = check_plain($element[$key]['#title']);
-      // If not explicitly set, construct a tab name from the title.
-      if (empty($element[$key]['#tab_name'])) {
-        $element[$key]['#tab_name'] = form_clean_id('tabs-' . strtolower($element[$key]['#title']));
+
+      // If no tab_name is set and we use descriptive titles, use one.
+      if ((!isset($element[$key]['#tab_name']) || empty($element[$key]['#tab_name'])) && variable_get('tabs_descriptive_urls', 0)) {
+        // Clean out invalid characters.
+        $clean_title = preg_replace('/[^\sa-zA-Z0-9\ ]+/ ', ' ', $element[$key]['#title']);
+        $element[$key]['#tab_name'] = strtolower($clean_title);
       }
+      // If the tab_name is still empty, set one.
+      if (!isset($element[$key]['#tab_name']) || empty($element[$key]['#tab_name'])) {
+        $element[$key]['#tab_name'] = $element['#tabset_name'] . '-tab-' . $index;
+      }
+      $element[$key]['#tab_name'] = form_clean_id($element[$key]['#tab_name']);
       if (!isset($element[$key]['#attributes'])) {
         $element[$key]['#attributes'] = array();
       }
@@ -91,17 +99,10 @@ function tabs_pre_render_tabset($element) {
       else {
         $element[$key]['#url'] = '#' .  $element[$key]['#tab_name'];
       }
-      $element[$key]['#attributes']['class'] = (isset($element[$key]['#attributes']['class']) ? $element[$key]['#attributes']['class'] .' ' : '') . $element[$key]['#tab_name'];
-      // Add the active class if this tab is selected.
+      $element[$key]['#attributes']['class'] = (isset($element[$key]['#attributes']['class']) ? $element[$key]['#attributes']['class'] . ' ' : '') . $element[$key]['#tab_name'];
+      // Add the ui-tabs-selected class if this tab is selected.
       if (isset($element[$key]['#selected']) && $element[$key]['#selected']) {
-        $element[$key]['#attributes']['class'] .= ' active';
-      }
-      // Add a class to the first and last tabs.
-      if ($index == 0) {
-        $element[$key]['#attributes']['class'] .= ' first';
-      }
-      if ($index + 1 == $num_items) {
-        $element[$key]['#attributes']['class'] .= ' last';
+        $element[$key]['#attributes']['class'] .= ' ui-tabs-selected';
       }
       $element[$key]['#index'] = $index;
     }
@@ -116,7 +117,7 @@ function tabs_load() {
   static $loaded = FALSE;
 
   if (!$loaded) {
-    $tabs_speed = variable_get('tabs_speed', 'slow');
+    $tabs_speed = variable_get('tabs_speed', 'fast');
     if (is_numeric($tabs_speed)) {
       $tabs_speed = (int) $tabs_speed;
     }
@@ -131,7 +132,7 @@ function tabs_load() {
     }
 
     drupal_add_js($path . '/tabs.js');
-    drupal_add_js(array('tabs' => array('slide' => (bool) variable_get('tabs_slide', 0), 'fade' => (bool) variable_get('tabs_fade', 0), 'speed' => $tabs_speed, 'auto_height' => (bool) variable_get('tabs_auto_height', 0), 'next_text' => variable_get('tabs_nav_next', t('next')), 'previous_text' => variable_get('tabs_nav_prev', t('previous')))), 'setting');
+    drupal_add_js(array('tabs' => array('slide' => (bool) variable_get('tabs_slide', 0), 'fade' => (bool) variable_get('tabs_fade', 0), 'speed' => $tabs_speed, 'auto_height' => (bool) variable_get('tabs_auto_height', 0), 'next_text' => variable_get('tabs_nav_next', t('next')), 'previous_text' => variable_get('tabs_nav_prev', t('previous')), 'navigation_titles' => variable_get('tabs_navigation_titles', 0))), 'setting');
     drupal_add_css($path . '/drupal-tabs.css');
     $loaded = TRUE;
   }
@@ -141,8 +142,7 @@ function tabs_load() {
  * Render a tabset 'manually' (when not rendering as part of a regular form render).
  */
 function tabs_render($form) {
-  $form_state = array();
-  return drupal_render(form_builder('tabset', $form, $form_state));
+  return drupal_render($form);
 }
 
 /**

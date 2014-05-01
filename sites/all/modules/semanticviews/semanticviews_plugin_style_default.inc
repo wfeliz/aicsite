@@ -1,4 +1,5 @@
 <?php
+// $Id: semanticviews_plugin_style_default.inc,v 1.1.2.14 2010/03/31 21:41:55 bangpound Exp $
 /**
  * @file
  * Contains the default style plugin.
