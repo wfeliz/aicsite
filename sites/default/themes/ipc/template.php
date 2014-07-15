@@ -189,6 +189,10 @@ function ipc_preprocess_page(&$vars, $hook) {
   }
   $vars['body_classes_array'] = $classes;
   $vars['body_classes'] = implode(' ', $classes); // Concatenate with spaces.
+  
+  // Add meta location tag - July 2014
+  drupal_set_html_head('<meta name="location" content="American Immigration Council" />');
+  $vars['head'] = drupal_get_html_head();
 }
 
 /**
