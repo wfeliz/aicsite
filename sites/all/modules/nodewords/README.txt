@@ -80,8 +80,7 @@ Installing Nodewords (first time installation)
  4. Enable other modules which provide meta tags. The following are included:
     - Nodewords basic meta tags: for "abstract", "canonical", "copyright",
       "description", "keywords", "logo", "original-source", "revisit-after",
-      "robots", "standout" and "syndication-source" meta tags, and the "title"
-      HTML tag.
+      "robots", and "standout" meta tags, and the "title" HTML tag.
     - Nodewords extra meta tags: for Dublin Core, "geo.placename",
       "geo.position", "geo.region", "icbm" and "shorturl" meta tags.
     - Nodewords Open Graph meta tags: for the Open Graph Protocol meta tags,

@@ -1765,3 +1765,39 @@ function nodewords_update_6187() {
 
   return $ret;
 }
+
+/**
+ * Migrate data from Nodewords_PageTitle and disable it.
+ */
+function nodewords_update_6188() {
+  $ret = array();
+
+  // Converty any data that might exist for Nodewords_PageTitle.
+  $ret[] = update_sql("UPDATE {nodewords} SET name='page_title' WHERE name='page.title'");
+
+  // If Nodewords_PageTitle is installed, disable it.
+  if (module_exists('nodewords_pagetitle')) {
+    // Disable the module.
+    module_disable(array('nodewords_pagetitle'));
+
+    // Uninstall the module.
+    drupal_uninstall_module('nodewords_pagetitle');
+
+    // Say 'cheese'!
+    $ret[] = array(
+      'success' => TRUE,
+      'query' => 'Nodewords_PageTitle was found. It is incompatible with 6.x-1.13 and newer releases of Nodewords. Luckily its functionality has been added into Nodewords itself, so it has been disabled and all data has been converted over. The Nodewords_PageTitle files can now be removed.',
+    );
+  }
+
+  // Nodewords_PageTitle itself was not found, but data was updated in case.
+  else {
+    // Say 'cheese'!
+    $ret[] = array(
+      'success' => TRUE,
+      'query' => 'The Nodewords_PageTitle module is incompatible with this verison of Nodewords, and is no longer necessary as Nodewords can handle the page title directly. Just in case, any data from that module has been converted to work with Nodewords.',
+    );
+  }
+
+  return $ret;
+}

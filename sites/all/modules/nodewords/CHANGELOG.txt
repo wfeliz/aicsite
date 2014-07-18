@@ -1,3 +1,13 @@
+Nodewords 6.x-1.15-beta1, 2013-09-29
+------------------------------------
+#1776810 by DamienMcKenna: Removed the deprecated syndication-source meta tag.
+#2055673 by DamienMcKenna: Disable Nodewords_PageTitle and migrate its data.
+#1889646 by anneeasterling, DamienMcKenna: Only output REVISIT-AFTER if a value
+  was assigned.
+#1957972 by perfectcu.be, DamienMcKenna: Added the Author meta tag.
+#2100425 by DamienMcKenna: Added the og:locale meta tag.
+
+
 Nodewords 6.x-1.14, 2012-12-05
 ------------------------------
 #1851570 by DamienMcKenna: Extended the {nodewords}.name field to varchar(128)

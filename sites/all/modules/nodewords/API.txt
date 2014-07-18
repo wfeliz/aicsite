@@ -136,8 +136,9 @@ Current meta tag weights, grouped by topic:
     -184: og:image
     -183: dcterms.date
   Author: -179 to -170
-    -179: dcterms.creator
-    -178: dcterms.contributor
+    -179: author
+    -178: dcterms.creator
+    -177: dcterms.contributor
   Legal: -169 to -160
     -169: copyright
   Location: -159 to -150
@@ -149,6 +150,7 @@ Current meta tag weights, grouped by topic:
     -154: og:region
     -153: og:postal-code
     -152: og:country-name
+    -151: og:locale
     -151: geo.position
     -150: geo.region
   Media: -149 to -140
@@ -163,7 +165,6 @@ Current meta tag weights, grouped by topic:
     -137: og:url
     -136: revist-after
     -135: standout
-    -134: syndication-source
-    -133: original-source
+    -134: original-source
   Robots: -129 to -120
     -129: robots
