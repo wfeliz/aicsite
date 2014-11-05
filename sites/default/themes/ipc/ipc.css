@@ -382,3 +382,7 @@ body{
 .admin-menu #top-bar {
   top:20px;
 }
+body.node-type-page #content div.meta div.submitted
+{
+  display: none;   
+}
