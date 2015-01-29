@@ -192,6 +192,12 @@ function ipc_preprocess_page(&$vars, $hook) {
   
   // Add meta location tag - July 2014
   drupal_set_html_head('<meta name="location" content="American Immigration Council" />');
+  drupal_set_html_head('<meta content="Member" name="portal" />');
+  drupal_set_html_head('<meta content="LawStudent" name="portal" />');
+  drupal_set_html_head('<meta content="InternationalAssociate" name="portal" />');
+  drupal_set_html_head('<meta content="Government" name="portal" />');
+  drupal_set_html_head('<meta content="Press" name="portal" />');
+  drupal_set_html_head('<meta content="Public" name="portal" />');
   $vars['head'] = drupal_get_html_head();
 }
 
