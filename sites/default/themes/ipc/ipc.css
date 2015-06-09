@@ -141,7 +141,7 @@ table.tblpad5 td {padding: 5px;}
 /* layout styles ========================================================== */
 #skipnav, #skip-to-nav {margin-left:-9999px;height:0px;}
 #page {width:960px;margin:0 auto; background:url(/sites/default/themes/ipc/images/bak.png) top left repeat;}
-#header {height:122px;overflow:hidden;background:url(/sites/default/themes/ipc/images/honor.jpg) top left no-repeat;}
+#header {height:122px;overflow:hidden;background:url(/sites/default/themes/ipc/images/grass.jpg) top left no-repeat;}
 #logo {padding:13px 0 0 40px; float:left;}
 #jump {background:url(/sites/default/themes/ipc/images/jump_bak.png) top right no-repeat; width:443px; height:40px;float:right;}
 #navbar-ipc {background:url(/sites/default/themes/ipc/images/nav_bak.gif) top left no-repeat; width:960px;height:38px;}
