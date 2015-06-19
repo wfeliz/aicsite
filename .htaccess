@@ -81,6 +81,13 @@ ErrorDocument 404 /index.php
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  RewriteCond %{HTTP_HOST} www.americanimmigrationcouncil.org
+  RewriteCond %{HTTP_HOST} americanimmigrationcouncil.org
+  RewriteRule ^litigation/unconstitutional-conditions-cbp-detention-facilities-challenged-class-action-lawsuit http://www.legalactioncenter.org/litigation/unconstitutional-conditions-cbp-detention-facilities-challenged-class-action-lawsuit [R,L]
+  RewriteCond %{HTTP_HOST} www.americanimmigrationcouncil.org
+  RewriteCond %{HTTP_HOST} americanimmigrationcouncil.org
+  RewriteRule ^just-facts/way-too-long-prolonged-detention-border-patrol-holding-cells-government-records-show http://immigrationpolicy.org/just-facts/way-too-long-prolonged-detention-border-patrol-holding-cells-government-records-show [R,L]
+
   # If your site can be accessed both with and without the 'www.' prefix, you
   # can use one of the following settings to redirect users to your preferred
   # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
