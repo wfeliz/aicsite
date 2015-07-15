@@ -20,3 +20,7 @@ Drupal.behaviors.fixTopBarMobile = function(context){
     });
   }
 };
+$(document).ready(function() {
+    // new logo link
+    $('#header #logo a').after('<div id="newlook">Learn more<br>about our<br><a href="http://www.americanimmigrationcouncil.org/newsroom/release/american-immigration-council-unveils-new-logo-and-more">new logo</a></div>');
+});

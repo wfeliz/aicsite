@@ -142,7 +142,7 @@ table.tblpad5 td {padding: 5px;}
 #skipnav, #skip-to-nav {margin-left:-9999px;height:0px;}
 #page {width:960px;margin:0 auto; background:url(/sites/default/themes/lac/images/bak.png) top left repeat;}
 #header {height:122px; background:url(/sites/default/themes/lac/images/grass.jpg) top left no-repeat;overflow:hidden;}
-#logo {padding:13px 0 0 40px; float:left;}
+#logo {padding:10px 0 0 40px; float:left;}
 #jump {background:url(/sites/default/themes/lac/images/jump_bak.png) top right no-repeat; width:443px; height:40px;float:right;}
 #navbar-lac {background:url(/sites/default/themes/lac/images/nav_bak.gif) top left no-repeat; width:960px;height:38px;}
 #col-container {padding:25px 10px;overflow:hidden;}
@@ -366,4 +366,15 @@ body{
 body.node-type-page #content div.meta div.submitted
 {
   display: none;   
+}
+#newlook
+{
+  position: relative;
+  top: 50px;
+  float: right;
+  left: 50px;
+}
+#newlook a
+{
+  color: #297529;
 }
